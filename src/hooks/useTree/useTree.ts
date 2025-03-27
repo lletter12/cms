@@ -1,8 +1,7 @@
 import React from "react";
 import {ReferenceType} from "@/components/types/menu/menu";
-import {TreeProps, TreeType} from "@/components/types/tree";
-
-const TreeContext = React.createContext<TreeProps | null>(null);
+import {TreeType} from "@/components/types/tree";
+import {TreeContext} from "@/components/Tree/TreeContext";
 
 export const useTree = <
     RT extends ReferenceType = ReferenceType,

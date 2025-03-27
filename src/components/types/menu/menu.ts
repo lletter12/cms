@@ -1,38 +1,5 @@
-
-import {ReactNode} from "react";
-import {ModalComponentProps, ModalContainerProps} from "@/components/types/modal/modal";
-
-export interface MenuProps extends ModalComponentProps, Pick<ModalContainerProps, "position" | "centered"> {
-    containerClassName?: string
-    contentClassName?: string
-    bodyClassName?: string
-    children?: ReactNode
-}
-
-type MenuContextType = {
-    getItemProps: ReturnType<typeof useInteractions>['getItemProps'];
-    activeIndex: number | null;
-    setActiveIndex: React.Dispatch<React.SetStateAction<number | null>>;
-    setHasFocusInside: React.Dispatch<React.SetStateAction<boolean>>;
-    allowHover: boolean;
-    isOpen: boolean;
-    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-    parent: MenuContextType | null;
-}
-
-interface MenuProps {
-    label: string;
-    nested?: boolean;
-    children?: React.ReactNode;
-    keepMounted?: boolean;
-    orientation?: 'vertical' | 'horizontal' | 'both';
-    cols?: number;
-}
-
-interface MenuItemProps {
-    label: string;
-    disabled?: boolean;
-}
+import {VirtualElement} from "@/utils/types/element";
+import {useInteractions} from "@/hooks/useInteractions/useInteractions";
 
 export type ReferenceType = Element | VirtualElement;
 export type OpenChangeReason =
@@ -72,11 +39,11 @@ export declare type UseReturn<RT extends ReferenceType = ReferenceType> = Pretti
         /**
          * A React ref to the reference element.
          */
-        reference: React.MutableRefObject<RT | null>;
+        reference: React.RefObject<RT | null>;
         /**
          * A React ref to the floating element.
          */
-        floating: React.MutableRefObject<HTMLElement | null>;
+        floating: React.RefObject<HTMLElement | null>;
         /**
          * A callback to set the reference element (reactive).
          */
@@ -147,30 +114,27 @@ export interface RootContext<RT extends ReferenceType = ReferenceType> {
     };
 }
 
+export interface MenuItemProps {
+    label: string;
+    disabled?: boolean;
+}
 
-import {
-    autoUpdate,
-    flip,
-    FloatingFocusManager,
-    FloatingList,
-    FloatingNode,
-    FloatingPortal,
-    FloatingTree,
-    offset,
-    safePolygon,
-    shift,
-    useClick,
-    useDismiss,
-    useFloating,
-    useFloatingNodeId,
-    useFloatingParentNodeId,
-    useFloatingTree,
-    useHover,
-    useInteractions,
-    useListItem,
-    useListNavigation,
-    useMergeRefs,
-    useRole,
-    useTypeahead,
-} from '@floating-ui/react';
-import {VirtualElement} from "@/utils/types/element";
+export type MenuContextType = {
+    getItemProps: ReturnType<typeof useInteractions>['getItemProps'];
+    activeIndex: number | null;
+    setActiveIndex: React.Dispatch<React.SetStateAction<number | null>>;
+    setHasFocusInside: React.Dispatch<React.SetStateAction<boolean>>;
+    allowHover: boolean;
+    isOpen: boolean;
+    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+    parent: MenuContextType | null;
+};
+
+export interface MenuProps {
+    label: string;
+    nested?: boolean;
+    children?: React.ReactNode;
+    keepMounted?: boolean;
+    orientation?: 'vertical' | 'horizontal' | 'both';
+    cols?: number;
+}

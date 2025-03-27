@@ -1,5 +1,7 @@
 import {TreeNodeType, TreeProps} from "@/components/types/tree";
 import {createPubSub} from "@/utils/createPubSub";
+import {TreeContext} from "./TreeContext"
+import React from "react";
 
 export const Tree = (props: TreeProps) => {
     const {children} = props;
@@ -17,7 +19,7 @@ export const Tree = (props: TreeProps) => {
     const events = React.useState(() => createPubSub())[0];
 
     return (
-        <FloatingTreeContext.Provider
+        <TreeContext.Provider
             value={React.useMemo(
                 () => ({
                     nodesRef,
@@ -29,6 +31,6 @@ export const Tree = (props: TreeProps) => {
             )}
         >
             {children}
-        </FloatingTreeContext.Provider>
+        </TreeContext.Provider>
     );
 }

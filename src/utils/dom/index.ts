@@ -1,6 +1,10 @@
+import React from "react";
 import {getTabbableOptions, tabbable} from "@/utils/tabbable";
 import {isTabbable} from "@/utils/types/tabbable";
-import {Alignment, Placement} from "@/utils/types/element";
+import {Alignment, Axis, Length, Placement} from "@/utils/types/element";
+import {getDocumentElement} from "@/utils/getDocumentElement/getDocumentElement";
+import {isHTMLElement} from "@/utils/isHTMLElement/isHTMLElement";
+import {getSideAxis} from "@/utils/getSideAxis/getSideAxis";
 
 let previouslyFocusedElements: Element[] = [];
 export declare function getNodeName(node: Node | Window): string;
@@ -19,6 +23,72 @@ export function addPreviouslyFocusedElement(element: Element | null) {
     }
 }
 */
+export function getOppositeAxis(axis: Axis): Axis {
+    return axis === 'x' ? 'y' : 'x';
+}
+export function getAxisLength(axis: Axis): Length {
+    return axis === 'y' ? 'height' : 'width';
+}
+export function getAlignmentAxis(placement: Placement): Axis {
+    return getOppositeAxis(getSideAxis(placement));
+}
+export const TYPE_ABLE_SELECTOR =
+    "input:not([type='hidden']):not([disabled])," +
+    "[contenteditable]:not([contenteditable='false']),textarea:not([disabled])";
+export function isTypeAbleElement(element: unknown): boolean {
+    return isHTMLElement(element) && element.matches(TYPE_ABLE_SELECTOR);
+}
+export function isRootElement(element: Element): boolean {
+    return element.matches('html,body');
+}
+export function isEventTargetWithin(
+    event: Event,
+    node: Node | null | undefined,
+) {
+    if (node == null) {
+        return false;
+    }
+
+    if ('composedPath' in event) {
+        return event.composedPath().includes(node);
+    }
+
+    // TS thinks `event` is of type never as it assumes all browsers support composedPath, but browsers without shadow dom don't
+    const e = event as Event;
+    return e.target != null && node.contains(e.target as Node);
+}
+export function getParentNode(node: Node): Node {
+    if (getNodeName(node) === 'html') {
+        return node;
+    }
+
+    const result =
+        // Step into the shadow DOM of the parent of a slotted node.
+        (node as any).assignedSlot ||
+        // DOM Element detected.
+        node.parentNode ||
+        // ShadowRoot detected.
+        (isShadowRoot(node) && node.host) ||
+        // Fallback.
+        getDocumentElement(node);
+
+    return isShadowRoot(result) ? result.host : result;
+}
+export function isLastTraversableNode(node: Node): boolean {
+    return ['html', 'body', '#document'].includes(getNodeName(node));
+}
+export function isReactEvent(event: any): event is React.SyntheticEvent {
+    return 'nativeEvent' in event;
+}
+export function getTarget(event: Event) {
+    if ('composedPath' in event) {
+        return event.composedPath()[0];
+    }
+
+    // TS thinks `event` is of type never as it assumes all browsers support
+    // `composedPath()`, but browsers without shadow DOM don't.
+    return (event as Event).target;
+}
 
 export function getPreviouslyFocusedElement() {
     return previouslyFocusedElements

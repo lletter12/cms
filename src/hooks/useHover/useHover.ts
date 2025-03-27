@@ -287,22 +287,30 @@ export function useHover(
 
         if (isElement(elements.domReference)) {
             const ref = elements.domReference as unknown as HTMLElement;
-            open && ref.addEventListener('mouseleave', onScrollMouseLeave);
+            if (open) {
+                ref.addEventListener('mouseleave', onScrollMouseLeave);
+            }
             if(elements.floating) {
                 elements.floating.addEventListener('mouseleave', onScrollMouseLeave);
             }
-            move && ref.addEventListener('mousemove', onMouseEnter, {once: true});
+            if (move) {
+                ref.addEventListener('mousemove', onMouseEnter, { once: true });
+            }
             ref.addEventListener('mouseenter', onMouseEnter);
             ref.addEventListener('mouseleave', onMouseLeave);
             return () => {
-                open && ref.removeEventListener('mouseleave', onScrollMouseLeave);
+                if (open) {
+                    ref.removeEventListener('mouseleave', onScrollMouseLeave);
+                }
                 if(elements.floating) {
                     elements.floating.removeEventListener(
                         'mouseleave',
                         onScrollMouseLeave,
                     );
                 }
-                move && ref.removeEventListener('mousemove', onMouseEnter);
+                if (move) {
+                    ref.removeEventListener('mousemove', onMouseEnter);
+                }
                 ref.removeEventListener('mouseenter', onMouseEnter);
                 ref.removeEventListener('mouseleave', onMouseLeave);
             };

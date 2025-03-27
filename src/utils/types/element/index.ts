@@ -42,7 +42,7 @@ export declare interface ElementRects {
 
 export interface ElementProps {
     reference?: React.HTMLProps<Element>;
-    element?: React.HTMLProps<HTMLElement>;
+    floating?: React.HTMLProps<HTMLElement>;
     item?:
         | React.HTMLProps<HTMLElement>
         | ((props: ExtendedUserProps) => React.HTMLProps<HTMLElement>);
