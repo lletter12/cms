@@ -1,0 +1,1 @@
+export type Index = Array<Element | Window | VisualViewport>;

@@ -1,0 +1,1 @@
+export declare function getFrameElement(win: Window): Element | null;
