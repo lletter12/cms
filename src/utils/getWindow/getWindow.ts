@@ -1,1 +1,0 @@
-export declare function getWindow(node: any): typeof window;
