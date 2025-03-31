@@ -1,0 +1,153 @@
+{
+  "SignIn": {
+    "pageTitle": "로그인",
+    "description": "로그인",
+    "text": {
+      "email": {
+        "label": "이메일",
+        "placeHolder": "이메일을 입력해주세요."
+      },
+      "password": {
+        "label": "비밀번호",
+        "placeHolder": "비밀번호를 입력해주세요."
+      },
+      "keep": {
+        "label": "로그인 유지"
+      },
+      "forgot": {
+        "label": "비밀번호를 잊어버리셨나요?"
+      },
+      "signIn": {
+        "label": "접속하기"
+      },
+      "account": {
+        "label": "계정이 없으신가요?"
+      },
+      "signUp": {
+        "label": "CMS 시작하기"
+      }
+    }
+  },
+  "Sidebar": {
+    "text": {
+      "menu": {
+        "label": "메뉴"
+      },
+      "components": {
+        "label": "컴포넌트"
+      },
+      "create": {
+        "label": "생성"
+      },
+      "dashboard": {
+        "label": "대시보드"
+      },
+      "calendar": {
+        "label": "달력"
+      },
+      "userProfile": {
+        "label": "프로필"
+      },
+      "banner": {
+        "label": "배너"
+      },
+      "modal": {
+        "label": "모달"
+      },
+      "forms": {
+        "label": "제출"
+      },
+      "formElements": {
+        "label": "제출 요소"
+      },
+      "tables": {
+        "label": "테이블"
+      },
+      "basicTables": {
+        "label": "기본 테이블"
+      },
+      "pages": {
+        "label": "페이지"
+      },
+      "blankPage": {
+        "label": "빈 페이지"
+      },
+      "charts": {
+        "label": "차트"
+      },
+      "uiElements": {
+        "label": "UI 요소"
+      },
+      "authentication": {
+        "label": "인증"
+      }
+    }
+  },
+  "Main": {
+    "pageTitle": "메인",
+    "description": "메인",
+    "text": {
+      "banners": {
+        "label": "게시중인 배너"
+      },
+      "modals": {
+        "label": "게시중인 모달"
+      },
+      "monthlyViewers": {
+        "label": "월별 게시수"
+      },
+      "topBanners": {
+        "label": "배너 인기 순위"
+      },
+      "topModals": {
+        "label": "모달 인기 순위"
+      },
+      "title": {
+        "label": "제목"
+      },
+      "count": {
+        "label": "조회 수"
+      }
+    }
+  },
+  "Calendar": {
+    "text": {
+      "jan": {
+        "label": "1월"
+      },
+      "feb": {
+        "label": "2월"
+      },
+      "mar": {
+        "label": "3월"
+      },
+      "apr": {
+        "label": "4월"
+      },
+      "may": {
+        "label": "5월"
+      },
+      "jun": {
+        "label": "6월"
+      },
+      "jul": {
+        "label": "7월"
+      },
+      "aug": {
+        "label": "8월"
+      },
+      "sep": {
+        "label": "9월"
+      },
+      "oct": {
+        "label": "10월"
+      },
+      "nov": {
+        "label": "11월"
+      },
+      "dec": {
+        "label": "12월"
+      }
+    }
+  }
+}

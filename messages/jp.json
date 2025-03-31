@@ -1,0 +1,152 @@
+{
+  "SignIn": {
+    "pageTitle": "サインイン",
+    "description": "サインイン",
+    "text": {
+      "email": {
+        "label": "イーメール",
+        "placeHolder": "メールアドレスを入力してください。"
+      },
+      "password": {
+        "label": "パスワード",
+        "placeHolder": "パスワードを入力してください。。"
+      },
+      "keep": {
+        "label": "ログイン維持"
+      },
+      "forgot": {
+        "label": "パスワードを忘れましたか？"
+      },
+      "signIn": {
+        "label": "接続する"
+      },
+      "account": {
+        "label": "アカウントがありませんか？"
+      },
+      "signUp": {
+        "label": "CMS 始めること"
+      }
+    }
+  },
+  "Sidebar": {
+    "text": {
+      "menu": {
+        "label": "メニュー"
+      },
+      "components":{
+        "label": "コンポーネント"
+      },
+      "create": {
+        "label": "作成"
+      },
+      "dashboard": {
+        "label": "ダッシュボード"
+      },
+      "calendar": {
+        "label": "カレンダー"
+      },
+      "userProfile": {
+        "label": "プロフィール"
+      },
+      "banner": {
+        "label": "バナー"
+      },
+      "modal": {
+        "label": "モーダル"
+      },
+      "forms": {
+        "label": "フォルム"
+      },
+      "formElements": {
+        "label": "フォルム 要素"
+      },
+      "tables": {
+        "label": "テーブル"
+      },
+      "basicTables": {
+        "label": "基本 テーブル"
+      },
+      "pages": {
+        "label": "ページ"
+      },
+      "blankPage": {
+        "label": "空のページ"
+      },
+      "charts": {
+        "label": "チャート"
+      },
+      "uiElements": {
+        "label": "UI 要素"
+      },
+      "authentication": {
+        "label": "認証"
+      }
+    }
+  },"Main": {
+  "pageTitle": "メイン",
+  "description": "メイン",
+  "text": {
+    "banners": {
+      "label": "バナー"
+    },
+    "modals": {
+      "label": "モーダル"
+    },
+    "monthlyViewers": {
+      "label": "月間視聴者"
+    },
+    "topBanners": {
+      "label": "トップバナー"
+    },
+    "topModals": {
+      "label": "トップモーダル"
+    },
+    "title": {
+      "label": "タイトル"
+    },
+    "count": {
+      "label": "カウント"
+    }
+  }
+},
+  "Calendar": {
+    "text": {
+      "jan": {
+        "label": "1月"
+      },
+      "feb": {
+        "label": "2月"
+      },
+      "mar": {
+        "label": "3月"
+      },
+      "apr": {
+        "label": "4月"
+      },
+      "may": {
+        "label": "5月"
+      },
+      "jun": {
+        "label": "6月"
+      },
+      "jul": {
+        "label": "7月"
+      },
+      "aug": {
+        "label": "8月"
+      },
+      "sep": {
+        "label": "9月"
+      },
+      "oct": {
+        "label": "10月"
+      },
+      "nov": {
+        "label": "11月"
+      },
+      "dec": {
+        "label": "12月"
+      }
+    }
+  }
+}

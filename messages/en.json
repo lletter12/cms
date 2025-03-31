@@ -1,0 +1,153 @@
+{
+  "SignIn": {
+    "pageTitle": "Sign in",
+    "description": "Sign in",
+    "text": {
+      "email": {
+        "label": "Email",
+        "placeHolder": "Enter your Email"
+      },
+      "password": {
+        "label": "Password",
+        "placeHolder": "Enter your password"
+      },
+      "keep": {
+        "label": "Keep me logged in"
+      },
+      "forgot": {
+        "label": "Forgot password?"
+      },
+      "signIn": {
+        "label": "Sign in"
+      },
+      "account": {
+        "label": "Don't have an account?"
+      },
+      "signUp": {
+        "label": "Start CMS"
+      }
+    }
+  },
+  "Sidebar": {
+    "text": {
+      "menu": {
+        "label": "Menu"
+      },
+      "components":{
+        "label": "Components"
+      },
+      "create": {
+        "label": "Create"
+      },
+      "dashboard": {
+        "label": "Dashboard"
+      },
+      "calendar": {
+        "label": "Calendar"
+      },
+      "userProfile": {
+        "label": "User Profile"
+      },
+      "banner": {
+        "label": "Banner"
+      },
+      "modal": {
+        "label": "Modal"
+      },
+      "forms": {
+        "label": "Forms"
+      },
+      "formElements": {
+        "label": "Form Elements"
+      },
+      "tables": {
+        "label": "Tables"
+      },
+      "basicTables": {
+        "label": "Basic Tables"
+      },
+      "pages": {
+        "label": "Pages"
+      },
+      "blankPage": {
+        "label": "Blank Page"
+      },
+      "charts": {
+        "label": "Charts"
+      },
+      "uiElements": {
+        "label": "UI Elements"
+      },
+      "authentication": {
+        "label": "Authentication"
+      }
+    }
+  },
+  "Main": {
+    "pageTitle": "Main",
+    "description": "Main",
+    "text": {
+      "banners": {
+        "label": "Banners"
+      },
+      "modals": {
+        "label": "Modals"
+      },
+      "monthlyViewers": {
+        "label": "Monthly Viewers"
+      },
+      "topBanners": {
+        "label": "Top Banners"
+      },
+      "topModals": {
+        "label": "Top Modals"
+      },
+      "title": {
+        "label": "Title"
+      },
+      "count": {
+        "label": "visitors"
+      }
+    }
+  },
+  "Calendar": {
+    "text": {
+      "jan": {
+        "label": "Jan"
+      },
+      "feb": {
+        "label": "Feb"
+      },
+      "mar": {
+        "label": "Mar"
+      },
+      "apr": {
+        "label": "Apr"
+      },
+      "may": {
+        "label": "May"
+      },
+      "jun": {
+        "label": "Jun"
+      },
+      "jul": {
+        "label": "Jul"
+      },
+      "aug": {
+        "label": "Aug"
+      },
+      "sep": {
+        "label": "Sep"
+      },
+      "oct": {
+        "label": "Oct"
+      },
+      "nov": {
+        "label": "Nov"
+      },
+      "dec": {
+        "label": "Dec"
+      }
+    }
+  }
+}
