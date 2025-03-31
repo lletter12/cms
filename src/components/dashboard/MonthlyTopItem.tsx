@@ -5,6 +5,7 @@ import {Dropdown} from "@/components/ui/dropdown/Dropdown";
 import {DropdownItem} from "@/components/ui/dropdown/DropdownItem";
 import {useState} from "react";
 import {MonthlyTopDetail, MonthlyTopDetailProps} from "@/components/dashboard/MonthlyTopDetail";
+import {useTranslations} from "next-intl";
 
 export interface MonthlyTopItemProps {
     header: string
@@ -13,8 +14,8 @@ export interface MonthlyTopItemProps {
 
 export const MonthlyTopItem = ({header, items}:MonthlyTopItemProps) => {
 
-
     const [isOpen, setIsOpen] = useState(false);
+    const t = useTranslations("Main");
 
     function toggleDropdown() {
         setIsOpen(!isOpen);
@@ -56,8 +57,8 @@ export const MonthlyTopItem = ({header, items}:MonthlyTopItemProps) => {
             </div>
             <div className="my-6">
                 <div className="flex items-center justify-between border-b border-gray-100 pb-4 dark:border-gray-800">
-                    <span className="text-theme-xs text-gray-400"> Source </span>
-                    <span className="text-right text-theme-xs text-gray-400"> Visitors </span>
+                    <span className="text-theme-xs text-gray-400"> {t("text.title.label")} </span>
+                    <span className="text-right text-theme-xs text-gray-400"> {t("text.count.label")} </span>
                 </div>
 
                 {items.map((value)=>

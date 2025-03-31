@@ -4,7 +4,7 @@ import Link from "next/link";
 interface DropdownItemProps {
   tag?: "a" | "button";
   href?: string;
-  onClick?: () => void;
+  onClick?: (value?: string) => void;
   onItemClick?: () => void;
   baseClassName?: string;
   className?: string;

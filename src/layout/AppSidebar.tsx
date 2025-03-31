@@ -16,6 +16,7 @@ import {
   TableIcon,
   UserCircleIcon,
 } from "../icons/index";
+import {useTranslations} from "next-intl";
 
 type NavItem = {
   name: string;
@@ -24,77 +25,90 @@ type NavItem = {
   subItems?: { name: string; path: string; pro?: boolean; new?: boolean }[];
 };
 
-const navItems: NavItem[] = [
-  {
-    icon: <GridIcon />,
-    name: "Dashboard",
-    path: "/main",
-  },
-  {
-    icon: <CalenderIcon />,
-    name: "Calendar",
-    path: "/calendar",
-  },
-  {
-    icon: <UserCircleIcon />,
-    name: "User Profile",
-    path: "/profile",
-  },
-
-  {
-    name: "Forms",
-    icon: <ListIcon />,
-    subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
-  },
-  {
-    name: "Tables",
-    icon: <TableIcon />,
-    subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
-  },
-  {
-    name: "Pages",
-    icon: <PageIcon />,
-    subItems: [
-      { name: "Blank Page", path: "/blank", pro: false },
-      { name: "404 Error", path: "/error-404", pro: false },
-    ],
-  },
-];
-
-const othersItems: NavItem[] = [
-  {
-    icon: <PieChartIcon />,
-    name: "Charts",
-    subItems: [
-      { name: "Line Chart", path: "/line-chart", pro: false },
-      { name: "Bar Chart", path: "/bar-chart", pro: false },
-    ],
-  },
-  {
-    icon: <BoxCubeIcon />,
-    name: "UI Elements",
-    subItems: [
-      { name: "Alerts", path: "/alerts", pro: false },
-      { name: "Avatar", path: "/avatars", pro: false },
-      { name: "Badge", path: "/badge", pro: false },
-      { name: "Buttons", path: "/buttons", pro: false },
-      { name: "Images", path: "/images", pro: false },
-      { name: "Videos", path: "/videos", pro: false },
-    ],
-  },
-  {
-    icon: <PlugInIcon />,
-    name: "Authentication",
-    subItems: [
-      { name: "Sign In", path: "/signin", pro: false },
-      { name: "Sign Up", path: "/signup", pro: false },
-    ],
-  },
-];
-
 const AppSidebar: React.FC = () => {
   const { isExpanded, isMobileOpen, isHovered, setIsHovered } = useSidebar();
   const pathname = usePathname();
+  const t = useTranslations("Sidebar");
+
+  const navItems: NavItem[] = [
+    {
+      icon: <GridIcon />,
+      name: t("text.dashboard.label"),
+      path: "/main",
+    },
+    {
+      icon: <CalenderIcon />,
+      name: t("text.calendar.label"),
+      path: "/calendar",
+    },
+    {
+      icon: <UserCircleIcon />,
+      name: t("text.userProfile.label"),
+      path: "/profile",
+    }
+  ];
+
+  const createItems: NavItem[] = [
+    {
+      icon: <PageIcon />,
+      name: t("text.banner.label"),
+      path: "/create/banner",
+    },
+    {
+      icon: <PageIcon />,
+      name: t("text.modal.label"),
+      path: "/create/modal",
+    },
+  ];
+
+  const componentItems: NavItem[] = [
+    {
+      name: t("text.forms.label"),
+      icon: <ListIcon />,
+      subItems: [{ name: t("text.formElements.label"), path: "/form-elements", pro: false }],
+    },
+    {
+      name: t("text.tables.label"),
+      icon: <TableIcon />,
+      subItems: [{ name: t("text.basicTables.label"), path: "/basic-tables", pro: false }],
+    },
+    {
+      name: t("text.pages.label"),
+      icon: <PageIcon />,
+      subItems: [
+        { name: t("text.blankPage.label"), path: "/blank", pro: false },
+        { name: "404 Error", path: "/error-404", pro: false },
+      ],
+    },
+    {
+      icon: <PieChartIcon />,
+      name: t("text.charts.label"),
+      subItems: [
+        { name: "Line Chart", path: "/line-chart", pro: false },
+        { name: "Bar Chart", path: "/bar-chart", pro: false },
+      ],
+    },
+    {
+      icon: <BoxCubeIcon />,
+      name: t("text.uiElements.label"),
+      subItems: [
+        { name: "Alerts", path: "/alerts", pro: false },
+        { name: "Avatar", path: "/avatars", pro: false },
+        { name: "Badge", path: "/badge", pro: false },
+        { name: "Buttons", path: "/buttons", pro: false },
+        { name: "Images", path: "/images", pro: false },
+        { name: "Videos", path: "/videos", pro: false },
+      ],
+    },
+    {
+      icon: <PlugInIcon />,
+      name: t("text.authentication.label"),
+      subItems: [
+        { name: "Sign In", path: "/signin", pro: false },
+        { name: "Sign Up", path: "/signup", pro: false },
+      ],
+    },
+  ];
 
   const renderMenuItems = (
     navItems: NavItem[],
@@ -238,7 +252,7 @@ const AppSidebar: React.FC = () => {
     // Check if the current path matches any submenu item
     let submenuMatched = false;
     ["main", "others"].forEach((menuType) => {
-      const items = menuType === "main" ? navItems : othersItems;
+      const items = menuType === "main" ? navItems : componentItems;
       items.forEach((nav, index) => {
         if (nav.subItems) {
           nav.subItems.forEach((subItem) => {
@@ -306,36 +320,53 @@ const AppSidebar: React.FC = () => {
           <div className="flex flex-col gap-4">
             <div>
               <h2
-                className={`mb-4 text-xs uppercase flex leading-[20px] text-gray-400 ${
-                  !isExpanded && !isHovered
-                    ? "lg:justify-center"
-                    : "justify-start"
-                }`}
+                  className={`mb-4 text-xs uppercase flex leading-[20px] text-gray-400 ${
+                      !isExpanded && !isHovered
+                          ? "lg:justify-center"
+                          : "justify-start"
+                  }`}
               >
                 {isExpanded || isHovered || isMobileOpen ? (
-                  "Menu"
+                    t("text.menu.label")
                 ) : (
-                  <HorizontaLDots />
+                    <HorizontaLDots/>
                 )}
               </h2>
               {renderMenuItems(navItems, "main")}
             </div>
 
-            <div className="">
+            <div>
               <h2
-                className={`mb-4 text-xs uppercase flex leading-[20px] text-gray-400 ${
-                  !isExpanded && !isHovered
-                    ? "lg:justify-center"
-                    : "justify-start"
-                }`}
+                  className={`mb-4 text-xs uppercase flex leading-[20px] text-gray-400 ${
+                      !isExpanded && !isHovered
+                          ? "lg:justify-center"
+                          : "justify-start"
+                  }`}
               >
                 {isExpanded || isHovered || isMobileOpen ? (
-                  "Others"
+                    t("text.create.label")
                 ) : (
-                  <HorizontaLDots />
+                    <HorizontaLDots/>
                 )}
               </h2>
-              {renderMenuItems(othersItems, "others")}
+              {renderMenuItems(createItems, "main")}
+            </div>
+
+            <div>
+              <h2
+                  className={`mb-4 text-xs uppercase flex leading-[20px] text-gray-400 ${
+                      !isExpanded && !isHovered
+                          ? "lg:justify-center"
+                          : "justify-start"
+                  }`}
+              >
+                {isExpanded || isHovered || isMobileOpen ? (
+                    t("text.components.label")
+                ) : (
+                    <HorizontaLDots/>
+                )}
+              </h2>
+              {renderMenuItems(componentItems, "others")}
             </div>
           </div>
         </nav>

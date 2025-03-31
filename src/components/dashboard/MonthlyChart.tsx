@@ -6,6 +6,7 @@ import { DropdownItem } from "../ui/dropdown/DropdownItem";
 import { useState } from "react";
 import { Dropdown } from "../ui/dropdown/Dropdown";
 import {useRouter} from "next/navigation";
+import {useTranslations} from "next-intl";
 
 // Dynamically import the ReactApexChart component
 const ReactApexChart = dynamic(() => import("react-apexcharts"), {
@@ -15,6 +16,8 @@ const ReactApexChart = dynamic(() => import("react-apexcharts"), {
 export default function MonthlyChart() {
 
     const router = useRouter();
+    const t = useTranslations("Main");
+    const tc = useTranslations("Calendar");
 
     const options: ApexOptions = {
         colors: ["#465fff"],
@@ -44,18 +47,18 @@ export default function MonthlyChart() {
         },
         xaxis: {
             categories: [
-                "Jan",
-                "Feb",
-                "Mar",
-                "Apr",
-                "May",
-                "Jun",
-                "Jul",
-                "Aug",
-                "Sep",
-                "Oct",
-                "Nov",
-                "Dec",
+                tc("text.jan.label"),
+                tc("text.feb.label"),
+                tc("text.mar.label"),
+                tc("text.apr.label"),
+                tc("text.may.label"),
+                tc("text.jun.label"),
+                tc("text.jul.label"),
+                tc("text.aug.label"),
+                tc("text.sep.label"),
+                tc("text.oct.label"),
+                tc("text.nov.label"),
+                tc("text.dec.label"),
             ],
             axisBorder: {
                 show: false,
@@ -120,7 +123,7 @@ export default function MonthlyChart() {
         <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white px-5 pt-5 dark:border-gray-800 dark:bg-white/[0.03] sm:px-6 sm:pt-6">
             <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold text-gray-800 dark:text-white/90">
-                    Monthly Viewer
+                    {t("text.monthlyViewers.label")}
                 </h3>
 
                 <div className="relative inline-block">
