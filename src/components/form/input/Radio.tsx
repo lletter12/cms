@@ -11,7 +11,7 @@ interface RadioProps {
   disabled?: boolean; // Optional disabled state for the radio button
 }
 
-const Radio: React.FC<RadioProps> = ({
+export const Radio = ({
   id,
   name,
   value,
@@ -20,7 +20,7 @@ const Radio: React.FC<RadioProps> = ({
   onChange,
   className = "",
   disabled = false,
-}) => {
+}: RadioProps) => {
   return (
     <label
       htmlFor={id}
@@ -61,5 +61,3 @@ const Radio: React.FC<RadioProps> = ({
     </label>
   );
 };
-
-export default Radio;

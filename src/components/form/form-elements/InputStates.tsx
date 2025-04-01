@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import ComponentCard from "../../common/ComponentCard";
-import Input from "../input/InputField";
-import Label from "../Label";
+import {ComponentCard} from "../../common/ComponentCard";
+import {Input} from "../input/InputField";
+import {Label} from "../Label";
 
 export default function InputStates() {
   const [email, setEmail] = useState("");

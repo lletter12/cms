@@ -62,3 +62,4 @@ const TableCell: React.FC<TableCellProps> = ({
 };
 
 export { Table, TableHeader, TableBody, TableRow, TableCell };
+export type {TableProps, TableBodyProps, TableCellProps, TableRowProps, TableHeaderProps}

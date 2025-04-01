@@ -1,5 +1,5 @@
 import {ArrowDownIcon, ArrowUpIcon, BoxIconLine, GroupIcon} from "@/icons";
-import Badge from "@/components/ui/badge/Badge";
+import {Badge} from "@/components/ui/badge/Badge";
 
 export default function Page () {
     return (

@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useEffect } from "react";
 
-interface ModalProps {
+export interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   className?: string;
@@ -10,15 +10,15 @@ interface ModalProps {
   isFullscreen?: boolean; // Default to false for backwards compatibility
 }
 
-export const Modal: React.FC<ModalProps> = ({
+export const Modal = ({
   isOpen,
   onClose,
   children,
   className,
   showCloseButton = true, // Default to true for backwards compatibility
   isFullscreen = false,
-}) => {
-  const modalRef = useRef<HTMLDivElement>(null);
+}: ModalProps) => {
+  const modalRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {

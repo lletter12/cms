@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-interface AvatarProps {
+export interface AvatarProps {
   src: string; // URL of the avatar image
   alt?: string; // Alt text for the avatar
   size?: "xsmall" | "small" | "medium" | "large" | "xlarge" | "xxlarge"; // Avatar size
@@ -32,12 +32,12 @@ const statusColorClasses = {
   busy: "bg-warning-500",
 };
 
-const Avatar: React.FC<AvatarProps> = ({
+export const Avatar = ({
   src,
-  alt = "User Avatar",
+  alt,
   size = "medium",
   status = "none",
-}) => {
+}: AvatarProps) => {
   return (
     <div className={`relative  rounded-full ${sizeClasses[size]}`}>
       {/* Avatar Image */}
@@ -46,7 +46,7 @@ const Avatar: React.FC<AvatarProps> = ({
         height="0"
         sizes="100vw"
         src={src}
-        alt={alt}
+        alt={alt ? alt : "avatar"}
         className="object-cover w-full rounded-full"
       />
 
@@ -61,5 +61,3 @@ const Avatar: React.FC<AvatarProps> = ({
     </div>
   );
 };
-
-export default Avatar;
