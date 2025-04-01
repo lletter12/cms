@@ -3,7 +3,7 @@
 import Checkbox from "@/components/form/input/Checkbox";
 import {Input} from "@/components/form/input/InputField";
 import {Label} from "@/components/form/Label";
-import Button from "@/components/ui/button/Button";
+import {Button} from "@/components/ui/button/Button";
 import {EyeCloseIcon, EyeIcon} from "@/icons";
 import Link from "next/link";
 import React, {useActionState, useState} from "react";
@@ -18,7 +18,7 @@ export const SignInForm = () => {
 
     const router = useRouter();
 
-    async function signup(prevState, htmlFormData) {
+    async function signup(prevState: any, htmlFormData: any) {
         // "use server";
         const id = htmlFormData.get("id");
         console.log("id:", id)
@@ -35,7 +35,7 @@ export const SignInForm = () => {
                     <a href="#"
                        className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
                         <div className={"relative w-36 h-16"}>
-                            <Image src={"/logo.png"} alt={""} fill style={{ width: "auto", height: "auto" }}/>
+                            <Image src={"/logo.png"} alt={""} fill style={{width: "auto", height: "auto"}}/>
                         </div>
                     </a>
                 </div>

@@ -1,4 +1,4 @@
-import React, {ComponentProps} from "react";
+import React from "react";
 
 interface ComponentPropertiesPanelProps {
     selectedItem : any
