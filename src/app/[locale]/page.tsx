@@ -1,5 +1,5 @@
 import {SignInForm} from "@/components/auth/SignInForm";
-import {LocaleDropdown} from "@/components/localDropdown/LocalDropDown";
+import {LocaleDropdown} from "@/components/localeDropdown/LocaleDropDown";
 
 export default function Home() {
     return (

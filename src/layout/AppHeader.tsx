@@ -5,7 +5,7 @@ import UserDropdown from "@/components/header/UserDropdown";
 import {useSidebar} from "@/context/SidebarContext";
 import Image from "next/image";
 import React, {useEffect, useRef, useState} from "react";
-import {LocaleDropdown} from "@/components/localDropdown/LocalDropDown";
+import {LocaleDropdown} from "@/components/localeDropdown/LocaleDropDown";
 import {useRouter} from "@/i18n/navigation";
 import {useTranslations} from "next-intl";
 
@@ -174,9 +174,7 @@ const AppHeader: React.FC = () => {
                     </div>
                     <div className="flex items-center gap-4">
                         <div className={"relative"}>
-                            <div className={"top-0 right-0"}>
-                                <LocaleDropdown/>
-                            </div>
+                            <LocaleDropdown/>
                         </div>
                         <UserDropdown/>
                     </div>
