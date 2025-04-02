@@ -92,13 +92,11 @@ const AppHeader: React.FC = () => {
                         {/* Cross Icon */}
                     </button>
 
-                    <div onClick={handlerOnClick} className={"relative w-16 h-8"}>
+                    <div onClick={handlerOnClick} className={"relative w-16 h-8 lg:hidden"}>
                         <Image
                             src="/logo.png"
                             alt="Logo"
                             fill
-                            priority
-                            sizes="(max-width: 64px) 100vw, (max-width: 36px) 50vw, 33vw"
                         />
                     </div>
 
