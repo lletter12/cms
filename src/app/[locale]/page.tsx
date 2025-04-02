@@ -3,7 +3,7 @@ import {LocaleDropdown} from "@/components/localDropdown/LocalDropDown";
 
 export default function Home() {
     return (
-        <div className="min-h-screen xl:flex dark:bg-gray-900 font-[family-name:var(--font-geist-sans)]">
+        <div className="min-h-screen xl:flex dark:bg-gray-900 font-[family-name:var(--font-geist-sans)] px-5">
             <div className={"relative"}>
                 <div className={"absolute top-3 right-3.5"}>
                     <LocaleDropdown/>
