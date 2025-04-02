@@ -1,8 +1,7 @@
-import {usePrevious} from "../usePrevious/usePrevious.ts";
-import {useWindowElement} from "../useWindowElement/useWindowElement.ts";
+import {usePrevious} from "../usePrevious/usePrevious";
+import {useWindowElement} from "../useWindowElement/useWindowElement";
 import {useEffect} from "react";
-import {scrollbarHide} from "../../utils/scrollbarHide/scrollbarHide.ts";
-import {scrollbarReset} from "../../utils/scrollbarReset/scrollbarReset.ts";
+import {scrollbarHide, scrollbarReset} from "@/utils/scrollbar";
 
 export const useScrollbar = (isOpenModal: boolean, scrollbarCheck?: boolean) => {
     const prevOpen = usePrevious(isOpenModal)

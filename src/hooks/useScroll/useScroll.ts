@@ -1,6 +1,6 @@
-import {getElementTarget, TargetType} from "@/utils/getElementTarget/getElementTarget";
-import {useEffectWithTarget} from "../useEffectWithTarget/useEffectWithTarget.ts";
-import {useAnimationFrameState} from "../useAnimationFrameState/useAnimationFrameState.ts";
+import {getElementTarget, TargetType} from "@/utils/getElementTarget";
+import {useEffectWithTarget} from "../useEffectWithTarget/useEffectWithTarget";
+import {useAnimationFrameState} from "../useAnimationFrameState/useAnimationFrameState";
 import {usePrevious} from "@/hooks/usePrevious/usePrevious";
 
 
@@ -18,12 +18,12 @@ export const useScroll = (
 
     useEffectWithTarget(
         () => {
-            const el = getElementTarget<Document>(target as TargetType<Document> | undefined, document) as Document | null;
+            const el = getElementTarget<Document>(target as TargetType<Document> | undefined, document) as Document | Element |null;
             if (!el) {
                 return;
             }
             const updatePosition = () => {
-                let newPosition: Position;
+                let newPosition: Position = { left: 0, top: 0 };
                 if (el === document) {
                     if (document.scrollingElement) {
                         newPosition = {
@@ -46,10 +46,12 @@ export const useScroll = (
                         };
                     }
                 } else {
-                    newPosition = {
-                        left: (el as Element).scrollLeft,
-                        top: (el as Element).scrollTop,
-                    };
+                    if (el instanceof Element) {
+                        newPosition = {
+                            left: el.scrollLeft,
+                            top: el.scrollTop,
+                        };
+                    }
                 }
                 if (shouldUpdateRef && shouldUpdateRef(newPosition)) {
                     setPosition(newPosition);
@@ -58,10 +60,22 @@ export const useScroll = (
 
             updatePosition();
 
-            el.addEventListener('scroll', updatePosition);
-            return () => {
-                el.removeEventListener('scroll', updatePosition);
-            };
+            if (el instanceof Element) {
+                // `el`이 `Element`일 경우
+                el.addEventListener("scroll", updatePosition);
+
+                return () => {
+                    el.removeEventListener("scroll", updatePosition);
+                };
+            } else if (el === document) {
+                // `el`이 `document`일 경우
+                document.addEventListener("scroll", updatePosition);
+
+                return () => {
+                    document.removeEventListener("scroll", updatePosition);
+                };
+            }
+
         }, [], target);
 
     return position;

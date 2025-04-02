@@ -4,8 +4,9 @@ import {ModalContainerTheme as modalContainerTheme} from "./ModalContainerTheme"
 import {ModalContext} from "./ModalContext"
 import {useModalTransition} from "@/hooks/useModalTransition/useModalTransition";
 import {useIsomorphicLayoutEffect} from "@/hooks/useIsomorphicLayoutEffect/useIsomorphicLayoutEffect";
-import {classnames} from "@/utils/classnames/classnames";
+
 import {ModalContainerProps} from "@/components/types/modal/modal";
+import {classNames} from "@/utils/classNames";
 
 export const ModalContainer: React.FC<ModalContainerProps> = ({
                                                                   className,
@@ -79,7 +80,7 @@ export const ModalContainer: React.FC<ModalContainerProps> = ({
         }
     }, [isOpenModal])
 
-    const classes = classnames(
+    const classes = classNames(
         theme.wrapper,
         isOpen ? theme.show : theme.hidden,
         position ? theme[position] : theme.wrapperPositionDefault,

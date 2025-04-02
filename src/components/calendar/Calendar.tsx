@@ -19,7 +19,7 @@ interface CalendarEvent extends EventInput {
   };
 }
 
-const Calendar: React.FC = () => {
+export const Calendar: React.FC = () => {
   const [selectedEvent, setSelectedEvent] = useState<CalendarEvent | null>(
     null
   );
@@ -28,7 +28,7 @@ const Calendar: React.FC = () => {
   const [eventEndDate, setEventEndDate] = useState("");
   const [eventLevel, setEventLevel] = useState("");
   const [events, setEvents] = useState<CalendarEvent[]>([]);
-  const calendarRef = useRef<FullCalendar>(null);
+  const calendarRef = useRef<FullCalendar|null>(null);
   const { isOpen, openModal, closeModal } = useModal();
 
   const calendarsEvents = {
@@ -279,5 +279,3 @@ const renderEventContent = (eventInfo: EventContentArg) => {
     </div>
   );
 };
-
-export default Calendar;

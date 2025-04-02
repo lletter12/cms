@@ -1,17 +1,15 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
-import {ModalTheme as modalTheme} from "./ModalTheme.ts"
+import {ModalTheme as modalTheme} from "./ModalTheme"
 import {ModalContext} from "./ModalContext"
 import React, {useCallback, useEffect, useRef, useState} from "react";
-import {useWindowElement} from "../../hooks/useWindowElement/useWindowElement.ts";
-import {useFocusTrap} from "../../hooks/useFocusTrap/useFocusTrap.ts";
-import {classnames} from "@/utils/classnames/classnames.ts";
-import {useModalTransition} from "../../hooks/useModalTransition/useModalTransition.ts";
-import {useIsomorphicLayoutEffect} from "../../hooks/useIsomorphicLayoutEffect/useIsomorphicLayoutEffect.ts";
-import {Backdrop} from "@/components/backDrop/BackDrop.tsx";
+import {useWindowElement} from "../../hooks/useWindowElement/useWindowElement";
+import {useFocusTrap} from "../../hooks/useFocusTrap/useFocusTrap";
+import {useModalTransition} from "../../hooks/useModalTransition/useModalTransition";
+import {useIsomorphicLayoutEffect} from "../../hooks/useIsomorphicLayoutEffect/useIsomorphicLayoutEffect";
+import {Backdrop} from "@/components/backDrop/BackDrop";
 import ReactDOM from "react-dom";
-import {useScrollbar} from "../../hooks/useScrollbar/useScrollbar.ts";
+import {useScrollbar} from "../../hooks/useScrollbar/useScrollbar";
 import {ModalComponentProps} from "@/components/types/modal/modal";
+import {classNames} from "@/utils/classNames";
 
 export const Modal: React.FC<ModalComponentProps> = ({
                                                          show = false,
@@ -54,7 +52,7 @@ export const Modal: React.FC<ModalComponentProps> = ({
     const modalInnerRef = useRef<HTMLElement | null>(null)
     const modalReference = modalRef ? modalRef : modalInnerRef
 
-    const modalClasses = classnames(
+    const modalClasses = classNames(
         theme.wrapper,
         className,
         staticBackdrop && theme.staticProperties,

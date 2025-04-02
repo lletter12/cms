@@ -1,4 +1,4 @@
-import {useWindowElement} from "../useWindowElement/useWindowElement.ts";
+import {useWindowElement} from "../useWindowElement/useWindowElement";
 
 type FocusableElement =
     | HTMLButtonElement

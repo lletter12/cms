@@ -4,7 +4,7 @@ import {ModalContextProps} from "@/components/types/modal/modal";
 export const ModalContext = createContext<ModalContextProps>({
     animation: true,
     isOpenModal: false,
-    setTransitionDuration: null,
+    setTransitionDuration: undefined,
     gradiant: false,
     size: undefined,
     scrollActive: false,

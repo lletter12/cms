@@ -1,8 +1,9 @@
 import React, {useRef} from "react"
 
 import {ModalContentTheme as modalContentTheme} from "./ModalContentTheme"
-import {classnames} from "@/utils/classnames/classnames";
+
 import {ModalContentProps} from "@/components/types/modal/modal";
+import {classNames} from "@/utils/classNames";
 
 export const ModalContent: React.FC<ModalContentProps> = React.forwardRef<
     HTMLAllCollection,
@@ -23,7 +24,7 @@ export const ModalContent: React.FC<ModalContentProps> = React.forwardRef<
         const contentRef = useRef<HTMLDivElement | null>(null)
         const contentReference = ref ? ref : contentRef
 
-        const classes = classnames(className, theme.wrapper)
+        const classes = classNames(className, theme.wrapper)
 
         return (
             <Element

@@ -48,11 +48,11 @@
       "userProfile": {
         "label": "프로필"
       },
-      "banner": {
-        "label": "배너"
+      "content": {
+        "label": "컨텐츠"
       },
-      "modal": {
-        "label": "모달"
+      "prompt": {
+        "label": "프롬프트"
       },
       "forms": {
         "label": "제출"

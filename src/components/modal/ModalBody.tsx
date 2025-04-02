@@ -2,9 +2,10 @@ import {ModalBodyTheme as modalBodyTheme} from "./ModalBodyTheme"
 import {ModalContext} from "./ModalContext"
 import React, {CSSProperties, useContext, useEffect, useRef, useState} from "react";
 import {useWindowHeight} from "@/hooks/useWindowHeight/useWindowHeight";
-import {classnames} from "@/utils/classnames/classnames";
+
 import {useScroll} from "@/hooks/useScroll/useScroll";
 import {ModalBodyProps} from "@/components/types/modal/modal";
+import {classNames} from "@/utils/classNames";
 
 export const ModalBody: React.FC<ModalBodyProps> = React.forwardRef<
     HTMLElement,
@@ -33,7 +34,7 @@ export const ModalBody: React.FC<ModalBodyProps> = React.forwardRef<
         const windowY = useWindowHeight()
         const [styles, setStyles] = useState<CSSProperties | undefined>()
         const theme = { ...modalBodyTheme, ...customTheme }
-        const classes = classnames(
+        const classes = classNames(
             size === "fullscreen" ? theme.fullSizeWrapper : theme.wrapper,
             modalBodyTheme.scrollable,
             className

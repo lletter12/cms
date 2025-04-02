@@ -1,9 +1,10 @@
-import {BackdropTheme as backdropTheme} from "@/components/backDrop/BackDropTheme"
 import React from "react"
 import ReactDOM from "react-dom"
-import {classnames} from "@/utils/classnames/classnames";
+
+import {BackdropTheme as backdropTheme} from "@/components/backDrop/BackDropTheme"
 import {useWindowElement} from "@/hooks/useWindowElement/useWindowElement";
 import {BackdropProps} from "@/components/types/backdrop/backdrop";
+import {classNames} from "@/utils/classNames";
 
 export const Backdrop: React.FC<BackdropProps> = ({
                                                       appendToBody = false,
@@ -25,7 +26,7 @@ export const Backdrop: React.FC<BackdropProps> = ({
     const backdropRef = React.useRef<HTMLDivElement | null>(null)
     const interval = React.useRef<ReturnType<typeof setTimeout> | null>(null)
 
-    const backdropClasses = classnames(
+    const backdropClasses = classNames(
         theme.wrapper,
         displayBackdrop ? "block" : "hidden",
         duplicateBackdrop ? "" : "bg-dim",

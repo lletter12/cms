@@ -1,5 +1,5 @@
 import React from "react";
-import {useIsomorphicLayoutEffect} from "../useIsomorphicLayoutEffect/useIsomorphicLayoutEffect.ts";
+import {useIsomorphicLayoutEffect} from "../useIsomorphicLayoutEffect/useIsomorphicLayoutEffect";
 
 export const useWindowHeight = () => {
     const [windowHeight, setWindowHeight] = React.useState(0)

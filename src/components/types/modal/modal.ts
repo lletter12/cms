@@ -108,7 +108,7 @@ type ModalContentThemeType = {
 
 export interface ModalContentProps extends ModalBaseComponent {
     ref?: React.ForwardedRef<HTMLAllCollection>
-    element?: React.ComponentProps<unknown>
+    element?: React.ComponentProps<any>
     theme?: ModalContentThemeType
     position?: "bottom"
 }
@@ -117,13 +117,13 @@ export interface ModalContentProps extends ModalBaseComponent {
 export interface ModalContextProps {
     animation?: boolean
     isOpenModal?: boolean
-    setTransitionDuration?: React.SetStateAction<unknown>
+    setTransitionDuration?: React.SetStateAction<any>
     gradiant?: boolean
     scrollActive?: boolean
     size?: "sm" | "md" | "lg" | "xl" | "2xl" | "static-dialog" | "fullscreen"
     handleScrollActive?: (value: boolean) => void
     handleCloseButton?: () => void
-    setShow?: React.SetStateAction<unknown>
+    setShow?: React.SetStateAction<any>
     headerRefHeight?: (value: number) => void
     footerRefHeight?: (value: number) => void
     containerRefMarginBottom?: (value: number) => void

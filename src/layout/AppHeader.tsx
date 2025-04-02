@@ -7,11 +7,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React, {useState, useEffect, useRef} from "react";
 import {LocaleDropdown} from "@/components/localDropdown/LocalDropDown";
+import {useRouter} from "@/i18n/navigation";
 
 const AppHeader: React.FC = () => {
     const [isApplicationMenuOpen, setApplicationMenuOpen] = useState(false);
-
     const {isMobileOpen, toggleSidebar, toggleMobileSidebar} = useSidebar();
+    const router = useRouter();
 
     const handleToggle = () => {
         if (window.innerWidth >= 1024) {
@@ -24,6 +25,11 @@ const AppHeader: React.FC = () => {
     const toggleApplicationMenu = () => {
         setApplicationMenuOpen(!isApplicationMenuOpen);
     };
+
+    const handlerOnClick = () => {
+        router.push("/main")
+    }
+
     const inputRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
@@ -86,7 +92,7 @@ const AppHeader: React.FC = () => {
                         {/* Cross Icon */}
                     </button>
 
-                    <Link href="/" className={"relative w-16 h-8"}>
+                    <div onClick={handlerOnClick} className={"relative w-16 h-8"}>
                         <Image
                             src="/logo.png"
                             alt="Logo"
@@ -94,7 +100,7 @@ const AppHeader: React.FC = () => {
                             priority
                             sizes="(max-width: 64px) 100vw, (max-width: 36px) 50vw, 33vw"
                         />
-                    </Link>
+                    </div>
 
                     <button
                         onClick={toggleApplicationMenu}

@@ -10,19 +10,19 @@ export const MonthlyTop = () => {
             id: "0",
             header: t("text.topBanners.label"),
             items: [
-                {source: "Page1", visitors: "10K"},
-                {source: "Page2", visitors: "5K"},
-                {source: "Page3", visitors: "2.5K"},
-                {source: "Page4", visitors: "2K"}
+                {source: "Banner1", visitors: "10K"},
+                {source: "Banner2", visitors: "5K"},
+                {source: "Banner3", visitors: "2.5K"},
+                {source: "Banner4", visitors: "2K"}
             ]
         }, {
             id: "1",
             header: t("text.topModals.label"),
             items: [
-                {source: "Banner1", visitors: "8K"},
-                {source: "Banner2", visitors: "7K"},
-                {source: "Banner3", visitors: "5K"},
-                {source: "Banner4", visitors: "2K"}
+                {source: "Modal1", visitors: "8K"},
+                {source: "Modal2", visitors: "7K"},
+                {source: "Modal3", visitors: "5K"},
+                {source: "Modal4", visitors: "2K"}
             ]
         }]
 

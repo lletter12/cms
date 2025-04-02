@@ -48,11 +48,11 @@
       "userProfile": {
         "label": "プロフィール"
       },
-      "banner": {
-        "label": "バナー"
+      "content": {
+        "label": "コンテンツ"
       },
-      "modal": {
-        "label": "モーダル"
+      "prompt": {
+        "label": "プロンプト"
       },
       "forms": {
         "label": "フォルム"

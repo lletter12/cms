@@ -21,7 +21,7 @@ export default function Layout({children}:LayoutProps) {
             : "lg:ml-[90px]";
 
     return (
-        <div className="min-h-screen xl:flex dark:bg-gray-900">
+        <div className="min-h-screen xl:flex bg-gray-300 dark:bg-gray-900">
             {/* Sidebar and Backdrop */}
             <AppSidebar />
             <Backdrop />

@@ -48,11 +48,11 @@
       "userProfile": {
         "label": "User Profile"
       },
-      "banner": {
-        "label": "Banner"
+      "content": {
+        "label": "Content"
       },
-      "modal": {
-        "label": "Modal"
+      "prompt": {
+        "label": "Prompt"
       },
       "forms": {
         "label": "Forms"
