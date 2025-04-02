@@ -1,4 +1,11 @@
 {
+  "Header": {
+    "text": {
+      "search": {
+        "placeHolder": "Search or type command"
+      }
+    }
+  },
   "SignIn": {
     "pageTitle": "Sign in",
     "description": "Sign in",

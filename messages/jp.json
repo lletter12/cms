@@ -1,4 +1,11 @@
 {
+  "Header": {
+    "text": {
+      "search": {
+        "placeHolder": "検索ワードを入力してください。"
+      }
+    }
+  },
   "SignIn": {
     "pageTitle": "サインイン",
     "description": "サインイン",
@@ -9,7 +16,7 @@
       },
       "password": {
         "label": "パスワード",
-        "placeHolder": "パスワードを入力してください。。"
+        "placeHolder": "パスワードを入力してください。"
       },
       "keep": {
         "label": "ログイン維持"

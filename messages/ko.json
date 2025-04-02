@@ -1,4 +1,11 @@
 {
+  "Header": {
+    "text": {
+      "search": {
+        "placeHolder": "검색어를 입력해주세요."
+      }
+    }
+  },
   "SignIn": {
     "pageTitle": "로그인",
     "description": "로그인",
