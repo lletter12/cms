@@ -55,8 +55,8 @@ export const OpenAIChat = () => {
     };
 
     return (
-        <div className="flex flex-col items-center p-5 h-full">
-            <div className="w-full h-80 max-h-screen max-w-lg overflow-y-auto bg-gray-400 shadow-lg rounded-lg p-4 mb-4">
+        <div className="flex flex-col items-center p-5 size-full">
+            <div className="w-full h-80 max-h-screen overflow-y-auto bg-gray-400 shadow-lg rounded-lg p-4 mb-4">
                 {messages.map((msg, index) => (
                     <div
                         key={index}
