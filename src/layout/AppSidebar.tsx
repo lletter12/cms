@@ -111,9 +111,7 @@ const AppSidebar: React.FC = () => {
     ];
 
     const handlerClose = () => {
-        if (window.innerWidth >= 1024) {
-            toggleSidebar();
-        } else {
+        if (window.innerWidth < 1024) {
             toggleMobileSidebar();
         }
     }
