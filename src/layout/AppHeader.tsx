@@ -4,8 +4,7 @@ import NotificationDropdown from "@/components/header/NotificationDropdown";
 import UserDropdown from "@/components/header/UserDropdown";
 import {useSidebar} from "@/context/SidebarContext";
 import Image from "next/image";
-import Link from "next/link";
-import React, {useState, useEffect, useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {LocaleDropdown} from "@/components/localDropdown/LocalDropDown";
 import {useRouter} from "@/i18n/navigation";
 
@@ -30,13 +29,13 @@ const AppHeader: React.FC = () => {
         router.push("/main")
     }
 
-    const inputRef = useRef<HTMLInputElement>(null);
+    const inputRef = useRef<HTMLInputElement | null>(null);
 
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
-            if ((event.metaKey || event.ctrlKey) && event.key === "k") {
+            if (inputRef && inputRef.current && (event.metaKey || event.ctrlKey) && event.key === "k") {
                 event.preventDefault();
-                inputRef.current?.focus();
+                inputRef.current!.focus();
             }
         };
 
