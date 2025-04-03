@@ -118,7 +118,11 @@
     }
   },
   "Calendar": {
+    "pageTitle": "달력",
     "text": {
+      "eventButton": {
+        "label": "일정 추가"
+      },
       "jan": {
         "label": "1월"
       },
@@ -154,6 +158,82 @@
       },
       "dec": {
         "label": "12월"
+      }
+    }
+  },
+  "AddEvent": {
+    "text": {
+      "add": {
+        "label": "일정 추가"
+      },
+      "edit": {
+        "label": "일정 수정"
+      },
+      "plan": {
+        "label": "다음 중요한 순간을 계획하세요. 일정을 잡거나 이벤트를 편집하여 계획대로 진행하세요."
+      },
+      "title": {
+        "label": "제목"
+      },
+      "color": {
+        "label": "색상"
+      },
+      "startDate": {
+        "label": "시작일"
+      },
+      "endDate": {
+        "label": "종료일"
+      },
+      "close": {
+        "label": "닫기"
+      }
+    }
+  },
+  "Profile": {
+    "pageTitle": "프로필",
+    "text": {
+      "edit": {
+        "label": "수정하기"
+      },
+      "subHeader": {
+        "label": "개인정보 수정",
+        "description": "프로필을 최신 상태로 유지하려면 세부 정보를 업데이트하세요."
+      },
+      "socialLinks": {
+        "label": "Social Links"
+      },
+      "personalInformation": {
+        "label": "개인 정보"
+      },
+      "firstName": {
+        "label": "이름"
+      },
+      "lastName": {
+        "label": "성"
+      },
+      "emailAddress": {
+        "label": "이메일 주소"
+      },
+      "phone" : {
+        "label": "전화번호"
+      },
+      "close": {
+        "label": "닫기"
+      },
+      "save": {
+        "label": "저장하기"
+      },
+      "address": {
+        "label": "주소"
+      },
+      "country": {
+        "label": "국가"
+      },
+      "city": {
+        "label": "시/도"
+      },
+      "postalCode": {
+        "label": "우편번호"
       }
     }
   }

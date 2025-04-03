@@ -40,7 +40,7 @@
       "menu": {
         "label": "メニュー"
       },
-      "components":{
+      "components": {
         "label": "コンポーネント"
       },
       "create": {
@@ -89,35 +89,40 @@
         "label": "認証"
       }
     }
-  },"Main": {
-  "pageTitle": "メイン",
-  "description": "メイン",
-  "text": {
-    "banners": {
-      "label": "バナー"
-    },
-    "modals": {
-      "label": "モーダル"
-    },
-    "monthlyViewers": {
-      "label": "月間視聴者"
-    },
-    "topBanners": {
-      "label": "トップバナー"
-    },
-    "topModals": {
-      "label": "トップモーダル"
-    },
-    "title": {
-      "label": "タイトル"
-    },
-    "count": {
-      "label": "カウント"
-    }
-  }
-},
-  "Calendar": {
+  },
+  "Main": {
+    "pageTitle": "メイン",
+    "description": "メイン",
     "text": {
+      "banners": {
+        "label": "バナー"
+      },
+      "modals": {
+        "label": "モーダル"
+      },
+      "monthlyViewers": {
+        "label": "月間視聴者"
+      },
+      "topBanners": {
+        "label": "トップバナー"
+      },
+      "topModals": {
+        "label": "トップモーダル"
+      },
+      "title": {
+        "label": "タイトル"
+      },
+      "count": {
+        "label": "カウント"
+      }
+    }
+  },
+  "Calendar": {
+    "pageTitle": "カレンダー",
+    "text": {
+      "eventButton": {
+        "label": "予定を追加"
+      },
       "jan": {
         "label": "1月"
       },
@@ -153,6 +158,82 @@
       },
       "dec": {
         "label": "12月"
+      }
+    }
+  },
+  "AddEvent": {
+    "text": {
+      "add": {
+        "label": "予定を追加"
+      },
+      "edit": {
+        "label": "スケジュールを編集"
+      },
+      "plan": {
+        "label": "次の大事な瞬間を計画しましょう: 予定通りに進めるためにイベントをスケジュールまたは編集しましょう"
+      },
+      "title": {
+        "label": "タイトル"
+      },
+      "color": {
+        "label": "色"
+      },
+      "startDate": {
+        "label": "開始日"
+      },
+      "endDate": {
+        "label": "終了日"
+      },
+      "close": {
+        "label": "閉じる"
+      }
+    }
+  },
+  "Profile": {
+    "pageTitle": "プロフィール",
+    "text": {
+      "edit": {
+        "label": "修正する"
+      },
+      "subHeader": {
+        "label": "プロフィールを編集",
+        "description": "プロフィールを最新の状態に保つには、詳細を更新してください。"
+      },
+      "socialLinks": {
+        "label": "Social Links"
+      },
+      "personalInformation": {
+        "label": "個人情報"
+      },
+      "fistName": {
+        "label": "なまえ"
+      },
+      "lastName": {
+        "label": "みょうじ"
+      },
+      "emailAddress": {
+        "label": "メールアドレス"
+      },
+      "phone" : {
+        "label": "電話番号"
+      },
+      "close": {
+        "label": "閉じる"
+      },
+      "save": {
+        "label": "セーブする"
+      },
+      "address": {
+        "label": "住所"
+      },
+      "country": {
+        "label": "国"
+      },
+      "city": {
+        "label": "都道府県"
+      },
+      "postalCode": {
+        "label": "郵便番号"
       }
     }
   }

@@ -118,7 +118,11 @@
     }
   },
   "Calendar": {
+    "pageTitle": "Calendar",
     "text": {
+      "eventButton": {
+        "label": "Add Event"
+      },
       "jan": {
         "label": "Jan"
       },
@@ -154,6 +158,82 @@
       },
       "dec": {
         "label": "Dec"
+      }
+    }
+  },
+  "AddEvent": {
+    "text": {
+      "add": {
+        "label": "Add Event"
+      },
+      "edit": {
+        "label": "Edit Event"
+      },
+      "plan": {
+        "label": "Plan your next big moment: schedule or edit an event to stay on track"
+      },
+      "title": {
+        "label": "Event Title"
+      },
+      "color": {
+        "label": "Event Color"
+      },
+      "startDate": {
+        "label": "Enter Start Date"
+      },
+      "endDate": {
+        "label": "Enter End Date"
+      },
+      "close": {
+        "label": "Close"
+      }
+    }
+  },
+  "Profile": {
+    "pageTitle": "Profile",
+    "text": {
+      "edit": {
+        "label": "Edit"
+      },
+      "subHeader": {
+        "label": "Edit Personal Information",
+        "description": "Update your details to keep your profile up-to-date."
+      },
+      "socialLinks": {
+        "label": "Social Links"
+      },
+      "personalInformation": {
+        "label": "Personal Information"
+      },
+      "firstName": {
+        "label": "First Name"
+      },
+      "lastName": {
+        "label": "Last Name"
+      },
+      "emailAddress": {
+        "label": "Email Address"
+      },
+      "phone" : {
+        "label": "Phone"
+      },
+      "close": {
+        "label": "Close"
+      },
+      "save": {
+        "label": "Save"
+      },
+      "address": {
+        "label": "Address"
+      },
+      "country": {
+        "label": "Country"
+      },
+      "city": {
+        "label": "City/State"
+      },
+      "postalCode": {
+        "label": "Postal Code"
       }
     }
   }
