@@ -2,9 +2,9 @@
 import {ApexOptions} from "apexcharts";
 import dynamic from "next/dynamic";
 import {MoreDotIcon} from "@/icons";
-import {DropdownItem} from "../ui/dropdown/DropdownItem";
+import {DropdownItem} from "@/components/ui";
 import {useState} from "react";
-import {Dropdown} from "../ui/dropdown/Dropdown";
+import {Dropdown} from "@/components/ui";
 import {useRouter} from "next/navigation";
 import {useTranslations} from "next-intl";
 
@@ -13,7 +13,7 @@ const ReactApexChart = dynamic(() => import("react-apexcharts").then((value) => 
     ssr: false,
 });
 
-export default function MonthlyChart() {
+export const MonthlyChart = () => {
 
     const router = useRouter();
     const t = useTranslations("Main");

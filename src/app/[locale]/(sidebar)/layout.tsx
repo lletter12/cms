@@ -2,9 +2,9 @@
 
 import {ReactNode} from "react";
 import {useSidebar} from "@/context/SidebarContext";
-import AppSidebar from "@/layout/AppSidebar";
-import Backdrop from "@/layout/Backdrop";
-import AppHeader from "@/layout/AppHeader";
+import {AppSidebar} from "@/layout/AppSidebar";
+import {Backdrop} from "@/layout/Backdrop";
+import {AppHeader} from "@/layout/AppHeader";
 
 interface LayoutProps {
     children: ReactNode

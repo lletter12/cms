@@ -4,10 +4,14 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Dropdown } from "@/components/ui/dropdown/Dropdown";
 import { DropdownItem } from "@/components/ui/dropdown/DropdownItem";
+import {useTranslations} from "next-intl";
 
 export default function NotificationDropdown() {
   const [isOpen, setIsOpen] = useState(false);
   const [notifying, setNotifying] = useState(true);
+  const t = useTranslations("Notification");
+
+
 
   function toggleDropdown() {
     setIsOpen(!isOpen);
@@ -52,11 +56,11 @@ export default function NotificationDropdown() {
       <Dropdown
         isOpen={isOpen}
         onClose={closeDropdown}
-        className="absolute mt-[17px] flex h-[480px] w-[350px] flex-col rounded-2xl border border-gray-200 bg-white p-3 shadow-theme-lg dark:border-gray-800 dark:bg-gray-dark sm:w-[361px] lg:right-0 -right-[240px]"
+        className="absolute mt-[17px] flex h-fit max-h-[480px] w-[350px] flex-col rounded-2xl border border-gray-200 bg-white p-3 shadow-theme-lg dark:border-gray-800 dark:bg-gray-dark sm:w-[361px] lg:right-0 -right-[240px]"
       >
         <div className="flex items-center justify-between pb-3 mb-3 border-b border-gray-100 dark:border-gray-700">
           <h5 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
-            Notification
+            {t("title")}
           </h5>
           <button
             onClick={toggleDropdown}
@@ -101,16 +105,13 @@ export default function NotificationDropdown() {
                   <span className="font-medium text-gray-800 dark:text-white/90">
                     Admin
                   </span>
-                  <span>requests permission to change</span>
-                  <span className="font-medium text-gray-800 dark:text-white/90">
-                    Project
-                  </span>
+                  <span>{t("text.requests.label")}</span>
                 </span>
 
                 <span className="flex items-center gap-2 text-gray-500 text-theme-xs dark:text-gray-400">
                   <span>Project</span>
                   <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
-                  <span>5 min ago</span>
+                  <span>5 {t("text.min.label")} {t("text.ago.label")}</span>
                 </span>
               </span>
             </DropdownItem>
@@ -137,16 +138,13 @@ export default function NotificationDropdown() {
                   <span className="font-medium text-gray-800 dark:text-white/90">
                     Admin
                   </span>
-                  <span> requests permission to change</span>
-                  <span className="font-medium text-gray-800 dark:text-white/90">
-                    Project
-                  </span>
+                  <span>{t("text.requests.label")}</span>
                 </span>
 
                 <span className="flex items-center gap-2 text-gray-500 text-theme-xs dark:text-gray-400">
                   <span>Project</span>
                   <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
-                  <span>8 min ago</span>
+                  <span>8 {t("text.min.label")} {t("text.ago.label")}</span>
                 </span>
               </span>
             </DropdownItem>
@@ -174,198 +172,13 @@ export default function NotificationDropdown() {
                   <span className="font-medium text-gray-800 dark:text-white/90">
                     Admin
                   </span>
-                  <span>requests permission to change</span>
-                  <span className="font-medium text-gray-800 dark:text-white/90">
-                    Project
-                  </span>
+                  <span>{t("text.requests.label")}</span>
                 </span>
 
                 <span className="flex items-center gap-2 text-gray-500 text-theme-xs dark:text-gray-400">
                   <span>Project</span>
                   <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
-                  <span>15 min ago</span>
-                </span>
-              </span>
-            </DropdownItem>
-          </li>
-
-          <li>
-            <DropdownItem
-              onItemClick={closeDropdown}
-              className="flex gap-3 rounded-lg border-b border-gray-100 p-3 px-4.5 py-3 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-white/5"
-              href="#"
-            >
-              <span className="relative block w-full h-10 rounded-full z-1 max-w-10">
-                <Image
-                  width={40}
-                  height={40}
-                  src="/logo.png"
-                  alt="User"
-                  className="w-full overflow-hidden rounded-full"
-                />
-                <span className="absolute bottom-0 right-0 z-10 h-2.5 w-full max-w-2.5 rounded-full border-[1.5px] border-white bg-error-500 dark:border-gray-900"></span>
-              </span>
-
-              <span className="block">
-                <span className="mb-1.5 space-x-1 block text-theme-sm text-gray-500 dark:text-gray-400">
-                  <span className="font-medium text-gray-800 dark:text-white/90">
-                    Admin
-                  </span>
-                  <span> requests permission to change</span>
-                  <span className="font-medium text-gray-800 dark:text-white/90">
-                    Project
-                  </span>
-                </span>
-
-                <span className="flex items-center gap-2 text-gray-500 text-theme-xs dark:text-gray-400">
-                  <span>Project</span>
-                  <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
-                  <span>1 hr ago</span>
-                </span>
-              </span>
-            </DropdownItem>
-          </li>
-
-          <li>
-            <DropdownItem
-              className="flex gap-3 rounded-lg border-b border-gray-100 p-3 px-4.5 py-3 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-white/5"
-              onItemClick={closeDropdown}
-            >
-              <span className="relative block w-full h-10 rounded-full z-1 max-w-10">
-                <Image
-                  width={40}
-                  height={40}
-                  src="/logo.png"
-                  alt="User"
-                  className="w-full overflow-hidden rounded-full"
-                />
-                <span className="absolute bottom-0 right-0 z-10 h-2.5 w-full max-w-2.5 rounded-full border-[1.5px] border-white bg-success-500 dark:border-gray-900"></span>
-              </span>
-
-              <span className="block">
-                <span className="mb-1.5 space-x-1 block text-theme-sm text-gray-500 dark:text-gray-400">
-                  <span className="font-medium text-gray-800 dark:text-white/90">
-                    Admin
-                  </span>
-                  <span>requests permission to change</span>
-                  <span className="font-medium text-gray-800 dark:text-white/90">
-                    Project
-                  </span>
-                </span>
-
-                <span className="flex items-center gap-2 text-gray-500 text-theme-xs dark:text-gray-400">
-                  <span>Project</span>
-                  <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
-                  <span>5 min ago</span>
-                </span>
-              </span>
-            </DropdownItem>
-          </li>
-
-          <li>
-            <DropdownItem
-              onItemClick={closeDropdown}
-              className="flex gap-3 rounded-lg border-b border-gray-100 p-3 px-4.5 py-3 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-white/5"
-            >
-              <span className="relative block w-full h-10 rounded-full z-1 max-w-10">
-                <Image
-                  width={40}
-                  height={40}
-                  src="/logo.png"
-                  alt="User"
-                  className="w-full overflow-hidden rounded-full"
-                />
-                <span className="absolute bottom-0 right-0 z-10 h-2.5 w-full max-w-2.5 rounded-full border-[1.5px] border-white bg-success-500 dark:border-gray-900"></span>
-              </span>
-
-              <span className="block">
-                <span className="mb-1.5 space-x-1 block text-theme-sm text-gray-500 dark:text-gray-400">
-                  <span className="font-medium text-gray-800 dark:text-white/90">
-                    Admin
-                  </span>
-                  <span>requests permission to change</span>
-                  <span className="font-medium text-gray-800 dark:text-white/90">
-                    Project
-                  </span>
-                </span>
-
-                <span className="flex items-center gap-2 text-gray-500 text-theme-xs dark:text-gray-400">
-                  <span>Project</span>
-                  <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
-                  <span>8 min ago</span>
-                </span>
-              </span>
-            </DropdownItem>
-          </li>
-
-          <li>
-            <DropdownItem
-              onItemClick={closeDropdown}
-              className="flex gap-3 rounded-lg border-b border-gray-100 p-3 px-4.5 py-3 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-white/5"
-            >
-              <span className="relative block w-full h-10 rounded-full z-1 max-w-10">
-                <Image
-                  width={40}
-                  height={40}
-                  src="/logo.png"
-                  alt="User"
-                  className="w-full overflow-hidden rounded-full"
-                />
-                <span className="absolute bottom-0 right-0 z-10 h-2.5 w-full max-w-2.5 rounded-full border-[1.5px] border-white bg-success-500 dark:border-gray-900"></span>
-              </span>
-
-              <span className="block">
-                <span className="mb-1.5 space-x-1 block text-theme-sm text-gray-500 dark:text-gray-400">
-                  <span className="font-medium text-gray-800 dark:text-white/90">
-                    Admin
-                  </span>
-                  <span>requests permission to change</span>
-                  <span className="font-medium text-gray-800 dark:text-white/90">
-                    Project
-                  </span>
-                </span>
-
-                <span className="flex items-center gap-2 text-gray-500 text-theme-xs dark:text-gray-400">
-                  <span>Project</span>
-                  <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
-                  <span>15 min ago</span>
-                </span>
-              </span>
-            </DropdownItem>
-          </li>
-
-          <li>
-            <DropdownItem
-              onItemClick={closeDropdown}
-              className="flex gap-3 rounded-lg border-b border-gray-100 p-3 px-4.5 py-3 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-white/5"
-              href="#"
-            >
-              <span className="relative block w-full h-10 rounded-full z-1 max-w-10">
-                <Image
-                  width={40}
-                  height={40}
-                  src="/logo.png"
-                  alt="User"
-                  className="overflow-hidden rounded-full"
-                />
-                <span className="absolute bottom-0 right-0 z-10 h-2.5 w-full max-w-2.5 rounded-full border-[1.5px] border-white bg-error-500 dark:border-gray-900"></span>
-              </span>
-
-              <span className="block">
-                <span className="mb-1.5 space-x-1 block text-theme-sm text-gray-500 dark:text-gray-400">
-                  <span className="font-medium text-gray-800 dark:text-white/90">
-                    Admin
-                  </span>
-                  <span>requests permission to change</span>
-                  <span className="font-medium text-gray-800 dark:text-white/90">
-                    Project
-                  </span>
-                </span>
-
-                <span className="flex items-center gap-2 text-gray-500 text-theme-xs dark:text-gray-400">
-                  <span>Project</span>
-                  <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
-                  <span>1 hr ago</span>
+                  <span>1 {t("text.hour.label")} {t("text.ago.label")}</span>
                 </span>
               </span>
             </DropdownItem>
@@ -376,7 +189,7 @@ export default function NotificationDropdown() {
           href="/notification"
           className="block px-4 py-2 mt-3 text-sm font-medium text-center text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700"
         >
-          View All Notifications
+          {t("text.viewButton.label")}
         </Link>
       </Dropdown>
     </div>

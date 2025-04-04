@@ -9,7 +9,7 @@ import {LocaleDropdown} from "@/components/localeDropdown/LocaleDropDown";
 import {useRouter} from "@/i18n/navigation";
 import {useTranslations} from "next-intl";
 
-const AppHeader: React.FC = () => {
+export const AppHeader = () => {
     const t = useTranslations("Header");
     const [isApplicationMenuOpen, setApplicationMenuOpen] = useState(false);
     const {isMobileOpen, toggleSidebar, toggleMobileSidebar} = useSidebar();
@@ -183,5 +183,3 @@ const AppHeader: React.FC = () => {
         </header>
     );
 };
-
-export default AppHeader;

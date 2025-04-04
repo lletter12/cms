@@ -2,7 +2,7 @@
 import React, {useCallback, useEffect, useRef, useState} from "react";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
-import {useSidebar} from "../context/SidebarContext";
+import {useSidebar} from "@/context/SidebarContext";
 import {
     BoxCubeIcon,
     CalenderIcon,
@@ -25,8 +25,8 @@ type NavItem = {
     subItems?: { name: string; path: string; pro?: boolean; new?: boolean }[];
 };
 
-const AppSidebar: React.FC = () => {
-    const {isExpanded, isMobileOpen, isHovered, setIsHovered, toggleSidebar, toggleMobileSidebar} = useSidebar();
+export const AppSidebar = () => {
+    const {isExpanded, isMobileOpen, isHovered, setIsHovered, toggleMobileSidebar} = useSidebar();
     const pathname = usePathname();
     const t = useTranslations("Sidebar");
 
@@ -382,5 +382,3 @@ const AppSidebar: React.FC = () => {
         </aside>
     );
 };
-
-export default AppSidebar;

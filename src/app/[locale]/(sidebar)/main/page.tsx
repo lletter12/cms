@@ -1,5 +1,5 @@
 import {Metrics} from "@/components/dashboard/Metrics"
-import MonthlyChart from "@/components/dashboard/MonthlyChart";
+import {MonthlyChart} from "@/components/dashboard/MonthlyChart";
 import {MonthlyTop} from "@/components/dashboard/MonthlyTop";
 
 export default function Page() {

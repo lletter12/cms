@@ -6,6 +6,29 @@
       }
     }
   },
+  "Notification": {
+    "title": "알림",
+    "text": {
+      "requests": {
+        "label": "님이 변경 허가 요청을 보냈습니다."
+      },
+      "hour": {
+        "label": "시간"
+      },
+      "min": {
+        "label": "분"
+      },
+      "sec": {
+        "label": "초"
+      },
+      "ago": {
+        "label": "전"
+      },
+      "viewButton": {
+        "label": "모든 알림 보기"
+      }
+    }
+  },
   "SignIn": {
     "pageTitle": "로그인",
     "description": "로그인",
@@ -200,7 +223,7 @@
         "description": "프로필을 최신 상태로 유지하려면 세부 정보를 업데이트하세요."
       },
       "socialLinks": {
-        "label": "Social Links"
+        "label": "소셜 링크"
       },
       "personalInformation": {
         "label": "개인 정보"
@@ -214,8 +237,11 @@
       "emailAddress": {
         "label": "이메일 주소"
       },
-      "phone" : {
+      "phone": {
         "label": "전화번호"
+      },
+      "editAddress": {
+        "label": "주소 수정"
       },
       "close": {
         "label": "닫기"
@@ -234,6 +260,18 @@
       },
       "postalCode": {
         "label": "우편번호"
+      }
+    }
+  },
+  "BlankPage": {
+    "description": "그리드 또는 패널에 콘텐츠를 배치해 시작하세요. 다양한 그리드 조합도 사용할 수 있습니다. 대시보드 및 다른 페이지를 확인해 주세요."
+  },
+  "ErrorPage": {
+    "title": "에러",
+    "description": "찾고 계신 페이지를 찾을 수 없습니다!",
+    "text": {
+      "goHome": {
+        "label": "홈페이지로 돌아가기"
       }
     }
   }

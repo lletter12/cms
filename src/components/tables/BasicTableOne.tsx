@@ -7,7 +7,7 @@ import {
     TableRow,
 } from "../ui/table";
 
-import {Badge} from "../ui/badge/Badge";
+import {Badge} from "@/components/ui";
 import Image from "next/image";
 
 interface Order {
@@ -37,9 +37,9 @@ const tableData: Order[] = [
         projectName: "Agency Website",
         team: {
             images: [
-                "/logo.png",
-                "/logo.png",
-                "/logo.png",
+                "/faviconLogo.png",
+                "/faviconLogo.png",
+                "/faviconLogo.png",
             ],
         },
         budget: "3.9K",
@@ -54,7 +54,7 @@ const tableData: Order[] = [
         },
         projectName: "Technology",
         team: {
-            images: ["/logo.png", "/logo.png"],
+            images: ["/faviconLogo.png", "/faviconLogo.png"],
         },
         budget: "24.9K",
         status: "Pending",
@@ -68,7 +68,7 @@ const tableData: Order[] = [
         },
         projectName: "Blog Writing",
         team: {
-            images: ["/logo.png"],
+            images: ["/faviconLogo.png"],
         },
         budget: "12.7K",
         status: "Active",
@@ -83,9 +83,9 @@ const tableData: Order[] = [
         projectName: "Social Media",
         team: {
             images: [
-                "/logo.png",
-                "/logo.png",
-                "/logo.png",
+                "/faviconLogo.png",
+                "/faviconLogo.png",
+                "/faviconLogo.png",
             ],
         },
         budget: "2.8K",
@@ -101,9 +101,9 @@ const tableData: Order[] = [
         projectName: "Website",
         team: {
             images: [
-                "/logo.png",
-                "/logo.png",
-                "/logo.png",
+                "/faviconLogo.png",
+                "/faviconLogo.png",
+                "/faviconLogo.png",
             ],
         },
         budget: "4.5K",
@@ -172,7 +172,7 @@ export default function BasicTableOne() {
                                                 <span className="block font-medium text-gray-800 text-theme-sm dark:text-white/90">
                                                   {order.user.name}
                                                 </span>
-                                                                        <span className="block text-gray-500 text-theme-xs dark:text-gray-400">
+                                                <span className="block text-gray-500 text-theme-xs dark:text-gray-400">
                                                   {order.user.role}
                                                 </span>
                                             </div>

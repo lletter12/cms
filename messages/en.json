@@ -6,6 +6,29 @@
       }
     }
   },
+  "Notification": {
+    "title": "Notification",
+    "text": {
+      "requests": {
+        "label": "has sent a request for permission to change."
+      },
+      "hour": {
+        "label": "hr"
+      },
+      "min": {
+        "label": "min"
+      },
+      "sec": {
+        "label": "sec"
+      },
+      "ago": {
+        "label": "ago"
+      },
+      "viewButton": {
+        "label": "View All Notifications"
+      }
+    }
+  },
   "SignIn": {
     "pageTitle": "Sign in",
     "description": "Sign in",
@@ -217,6 +240,9 @@
       "phone" : {
         "label": "Phone"
       },
+      "editAddress": {
+        "label": "Edit Address"
+      },
       "close": {
         "label": "Close"
       },
@@ -234,6 +260,18 @@
       },
       "postalCode": {
         "label": "Postal Code"
+      }
+    }
+  },
+  "BlankPage": {
+    "description":"Start putting content on grids or panels, you can also use different combinations of grids. Please check out the dashboard and other pages."
+  },
+  "ErrorPage": {
+    "title": "Error",
+    "description": "We can’t seem to find the page you are looking for!",
+    "text": {
+      "goHome": {
+        "label": "ホームページに戻る"
       }
     }
   }

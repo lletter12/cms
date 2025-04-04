@@ -6,6 +6,29 @@
       }
     }
   },
+  "Notification": {
+    "title": "通知",
+    "text": {
+      "requests": {
+        "label": "さんが変更許可の要求を送信しました。"
+      },
+      "hour": {
+        "label": "時間"
+      },
+      "min": {
+        "label": "分"
+      },
+      "sec": {
+        "label": "秒"
+      },
+      "ago": {
+        "label": "前"
+      },
+      "viewButton": {
+        "label": "すべての通知を表示"
+      }
+    }
+  },
   "SignIn": {
     "pageTitle": "サインイン",
     "description": "サインイン",
@@ -200,12 +223,12 @@
         "description": "プロフィールを最新の状態に保つには、詳細を更新してください。"
       },
       "socialLinks": {
-        "label": "Social Links"
+        "label": "ソーシャルリンク"
       },
       "personalInformation": {
         "label": "個人情報"
       },
-      "fistName": {
+      "firstName": {
         "label": "なまえ"
       },
       "lastName": {
@@ -216,6 +239,9 @@
       },
       "phone" : {
         "label": "電話番号"
+      },
+      "editAddress": {
+        "label": "住所を編集"
       },
       "close": {
         "label": "閉じる"
@@ -234,6 +260,18 @@
       },
       "postalCode": {
         "label": "郵便番号"
+      }
+    }
+  },
+  "BlankPage": {
+    "description": "グリッドやパネルにコンテンツを配置し始めてください。さまざまなグリッドの組み合わせも使用できます。ダッシュボードや他のページもぜひご確認ください。"
+  },
+  "ErrorPage": {
+    "title": "エラー",
+    "description": "お探しのページが見つかりませんでした！",
+    "text": {
+      "goHome": {
+        "label": "Back to Home Page"
       }
     }
   }

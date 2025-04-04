@@ -83,7 +83,7 @@ export const UserAddressCard = () => {
                     className="relative w-full p-4 overflow-y-auto bg-white no-scrollbar rounded-3xl dark:bg-gray-900 lg:p-11">
                     <div className="px-2 pr-14">
                         <h4 className="mb-2 text-2xl font-semibold text-gray-800 dark:text-white/90">
-                            {t("text.edit.label")} {t("text.address.label")}
+                            {t("text.editAddress.label")}
                         </h4>
                         <p className="mb-6 text-sm text-gray-500 dark:text-gray-400 lg:mb-7">
                             {t("text.subHeader.description")}
@@ -109,7 +109,7 @@ export const UserAddressCard = () => {
 
                             </div>
                         </div>
-                        <div className="flex items-center gap-3 px-2 mt-6 lg:justify-end">
+                        <div className="flex items-center justify-between gap-3 px-2 mt-6 justify-end">
                             <Button size="sm" variant="outline" onClick={closeModal}>
                                 {t("text.close.label")}
                             </Button>

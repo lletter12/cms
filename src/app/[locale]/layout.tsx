@@ -20,6 +20,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: "prowise cms",
     description: "prowise cms",
+    icons: {
+        icon: "/faviconLogo.png"
+    }
 };
 
 export default async function RootLayout({
