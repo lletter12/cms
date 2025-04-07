@@ -6,7 +6,7 @@ import {classNames} from "@/utils/classNames";
 
 export interface DropdownProps {
     isOpen: boolean;
-    onClose: () => void;
+    onClose?: () => void;
     children: React.ReactNode;
     className?: string;
 }
@@ -26,7 +26,7 @@ export const Dropdown = ({
                 dropdownRef.current!.contains(event.target as Node) &&
                 !(event.target as HTMLElement).closest('.dropdown-toggle')
             ) {
-                onClose();
+                onClose?.();
             }
         };
 

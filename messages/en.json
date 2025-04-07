@@ -29,6 +29,22 @@
       }
     }
   },
+  "UserDropDown": {
+    "text": {
+      "editProfile": {
+        "label": "Edit profile"
+      },
+      "accountSettings": {
+        "label": "Account settings"
+      },
+      "support": {
+        "label": "Support"
+      },
+      "signOut": {
+        "label": "Sign out"
+      }
+    }
+  },
   "SignIn": {
     "pageTitle": "Sign in",
     "description": "Sign in",

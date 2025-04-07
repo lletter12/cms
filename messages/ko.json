@@ -29,6 +29,22 @@
       }
     }
   },
+  "UserDropDown": {
+    "text": {
+      "editProfile": {
+        "label": "프로필 수정"
+      },
+      "accountSettings": {
+        "label": "계정 설정"
+      },
+      "support": {
+        "label": "지원"
+      },
+      "signOut": {
+        "label": "로그아웃"
+      }
+    }
+  },
   "SignIn": {
     "pageTitle": "로그인",
     "description": "로그인",

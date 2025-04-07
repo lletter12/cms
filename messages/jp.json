@@ -29,6 +29,22 @@
       }
     }
   },
+  "UserDropDown": {
+    "text": {
+      "editProfile": {
+        "label": "プロフィール編集"
+      },
+      "accountSettings": {
+        "label": "アカウント設定"
+      },
+      "support": {
+        "label": "サポート"
+      },
+      "signOut": {
+        "label": "サインアウト"
+      }
+    }
+  },
   "SignIn": {
     "pageTitle": "サインイン",
     "description": "サインイン",
