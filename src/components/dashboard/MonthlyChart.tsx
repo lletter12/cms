@@ -11,6 +11,7 @@ import {useTranslations} from "next-intl";
 // Dynamically import the ReactApexChart component
 const ReactApexChart = dynamic(() => import("react-apexcharts").then((value) => value.default), {
     ssr: false,
+    loading: () => <div className="-ml-5 min-w-[650px] xl:min-w-full pl-2 animate-pulse" />
 });
 
 export const MonthlyChart = () => {

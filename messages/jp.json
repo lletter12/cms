@@ -126,6 +126,15 @@
       },
       "authentication": {
         "label": "認証"
+      },
+      "posting": {
+        "label": "投稿"
+      },
+      "banners": {
+        "label": "バナー"
+      },
+      "modals": {
+        "label": "モーダル"
       }
     }
   },

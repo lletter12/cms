@@ -724,6 +724,10 @@ span.flatpickr-weekday,
   @apply border-brand-500 bg-brand-500 dark:border-brand-500;
 }
 
+body {
+  overscroll-behavior: none;
+}
+
 .task {
   transition: all 0.2s ease; /* Smooth transition for visual effects */
 }

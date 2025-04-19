@@ -126,6 +126,15 @@
       },
       "authentication": {
         "label": "Authentication"
+      },
+      "posting": {
+        "label": "Posting"
+      },
+      "banners": {
+        "label": "Banners"
+      },
+      "modals": {
+        "label": "Modals"
       }
     }
   },

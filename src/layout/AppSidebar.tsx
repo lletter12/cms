@@ -32,6 +32,14 @@ export const AppSidebar = () => {
 
     const navItems: NavItem[] = [
         {
+            name: t("text.posting.label"),
+            icon: <PageIcon/>,
+            subItems: [
+                {name: t("text.banners.label"), path: "/posting-banners", pro: false},
+                {name: t("text.modals.label"), path: "/posting-modals", pro: false},
+            ],
+        },
+        {
             icon: <GridIcon/>,
             name: t("text.dashboard.label"),
             path: "/main",

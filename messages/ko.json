@@ -126,6 +126,15 @@
       },
       "authentication": {
         "label": "인증"
+      },
+      "posting": {
+        "label": "게시중"
+      },
+      "banners": {
+        "label": "배너"
+      },
+      "modals": {
+        "label": "모달"
       }
     }
   },
